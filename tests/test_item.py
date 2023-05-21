@@ -39,3 +39,17 @@ def test_string_to_number():
     item = Item('Смартфон', 10000, 1)
     assert isinstance(item.string_to_number(item.quantity), int)
 
+
+def test_repr():
+    item1 = Item("Смартфон", 10000, 20)
+    item2 = Item("Ноутбук", 20000, 5)
+    assert repr(item1) == "Item('Смартфон', 10000, 20)"
+    assert repr(item2) == "Item('Ноутбук', 20000, 5)"
+
+
+def test_str():
+    item1 = Item("Смартфон", 10000, 50)
+    item2 = Item("Ноутбук", 20000, 15)
+    assert str(item1) == 'Смартфон'
+    assert str(item2) == 'Ноутбук'
+
